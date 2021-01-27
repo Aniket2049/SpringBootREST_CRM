@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import as.sbr_crm.entity.Customer;
 import as.sbr_crm.service.CustomerService;
@@ -42,6 +43,24 @@ public class CustomerController
 	public String SaveCustomer(@ModelAttribute("customer") Customer customer)
 	{
 		customerService.SaveCustomer(customer);
+		
+		return "redirect:/";
+	}
+	
+	@GetMapping("/update")
+	public String UpdateForm(@RequestParam("cID") int cID, Model model)
+	{
+		Customer customer = customerService.FindCustomerByID(cID);
+		
+		model.addAttribute("customer", customer);
+		
+		return "cform";
+	}
+	
+	@GetMapping("/delete")
+	public String DeleteEmployee(@RequestParam("cID") int cID)
+	{
+		customerService.DeleteCustomerByID(cID);
 		
 		return "redirect:/";
 	}
