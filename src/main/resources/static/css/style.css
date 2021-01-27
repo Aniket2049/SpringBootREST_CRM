@@ -1,1 +1,24 @@
-@charset "ISO-8859-1";
+.button {
+	background-color: #576ee4;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	border: 2px solid #576ee4;
+}
+
+.button:hover {
+	background-color: white;
+	color: black;
+}
+
+input {
+	font-family: 'Ubuntu';
+	text-align: center;
+}
