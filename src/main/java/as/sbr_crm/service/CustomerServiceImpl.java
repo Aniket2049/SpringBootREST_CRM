@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import as.sbr_crm.dao.CustomerRepository;
 import as.sbr_crm.entity.Customer;
 
+@Service
 public class CustomerServiceImpl implements CustomerService
 {
 	@Autowired
