@@ -3,6 +3,7 @@ package as.sbr_crm.rest;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -54,5 +55,18 @@ public class CustomerRESTController
 		customerService.SaveCustomer(customer);
 		
 		return customer;
+	}
+	
+	@DeleteMapping("/customers/{cID}")
+	public String DeleteCustomer(@PathVariable int cID)
+	{
+		Customer customer = customerService.FindCustomerByID(cID);
+		if (customer == null)
+		{
+			throw new RuntimeException("Customer doesn't exist!");
+		}
+		customerService.DeleteCustomerByID(cID);
+		
+		return "Customer deleted with ID:" + cID;
 	}
 }
