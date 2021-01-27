@@ -18,7 +18,14 @@
 	color: black;
 }
 
-input {
+input[type=text] {
 	font-family: 'Ubuntu';
 	text-align: center;
+}
+
+input[type=text]:focus {
+	font-family: 'Ubuntu';
+	text-align: center;
+	border: 1px solid #576ee4;
+	border-radius: 2px;
 }
