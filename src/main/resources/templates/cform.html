@@ -12,10 +12,20 @@
 		<form action="#" th:action="@{/save}" th:object="${customer}" method="POST">
 			<!-- hidden form field -->
 			<input type="hidden" th:field="*{id}" />
-			<input type="text" 	th:field="*{firstName}" placeholder="First name">
-			<input type="text" 	th:field="*{lastName}" 	placeholder="Last name">
-			<input type="text" 	th:field="*{email}" 	placeholder="Email">
-			<button type="submit" >Save!</button>
+			<table>
+				<tr>
+					<td><input type="text" th:field="*{firstName}" placeholder="First name"></td>
+				</tr>
+				<tr>
+					<td><input type="text" th:field="*{lastName}" placeholder="Last name"></td>
+				</tr>
+				<tr>
+					<td><input type="text" th:field="*{email}" placeholder="Email"></td>
+				</tr>
+				<tr>
+					<td><button type="submit" style="width: 100%">Save!</button></td>
+				</tr>
+			</table>
 		</form>
 		<hr>
 		<a th:href="@{/}">Back to list</a>

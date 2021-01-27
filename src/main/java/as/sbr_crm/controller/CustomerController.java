@@ -20,7 +20,7 @@ public class CustomerController
 	private CustomerService customerService;
 	
 	@GetMapping("/")
-	public String CList(Model model)
+	public String CustomerList(Model model)
 	{
 		List<Customer> customers = customerService.GetAllCustomers();
 		
@@ -48,7 +48,7 @@ public class CustomerController
 	}
 	
 	@GetMapping("/update")
-	public String UpdateForm(@RequestParam("cID") int cID, Model model)
+	public String UpdateCustomer(@RequestParam("cID") int cID, Model model)
 	{
 		Customer customer = customerService.FindCustomerByID(cID);
 		
@@ -58,7 +58,7 @@ public class CustomerController
 	}
 	
 	@GetMapping("/delete")
-	public String DeleteEmployee(@RequestParam("cID") int cID)
+	public String DeleteCustomer(@RequestParam("cID") int cID)
 	{
 		customerService.DeleteCustomerByID(cID);
 		
