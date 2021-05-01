@@ -2,17 +2,18 @@
  Basically a CRUD implementation project for SpringBoot and SpringData JPA with REST functionality.
  
 ### What is it
-- a Customer Relationship Management webapp with REST api.
+- a Customer Relationship Management webapp with REST API.
 - One can add a customer, update or even delete an existing one.
 - Customer record has fields FirstName, LastName, and Email.
 - Database used is H2. Since the intention of app is demonstration only.
-- Access REST api with context path 'sbr_crm/api/employees'.
+- Access REST API with context path 'sbr_crm/api/employees'.
 
 ### Highlights
-- Simple REST Api implementation.
+- Simple REST API implementation.
 - Simple record creation, updation and deletion via SpringData JPA.
 - H2 for database.
-- Thymeleaf and some CSS for frontend.
+- Bootstrap 4 for simple and clean UI.
+- Thymeleaf and some Bootstrap 4 for frontend.
 - Spring MVC as The Framework for app as whole.
 - Maven based so it can be extended further in terms of functionality and be easily ported to any other IDEs.
 
@@ -34,4 +35,5 @@
 - REST
 - H2
 - Thymeleaf
+- Bootstrap 4
  
