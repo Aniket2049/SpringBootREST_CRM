@@ -1,11 +1,6 @@
 package as.sbr_crm.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "customer")
@@ -14,13 +9,13 @@ public class Customer
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	private int		id;
+	private int    id;
 	@Column(name = "first_name")
-	private String	firstName;
+	private String firstName;
 	@Column(name = "last_name")
-	private String	lastName;
+	private String lastName;
 	@Column(name = "email")
-	private String	email;
+	private String email;
 	
 	// ----- CONSTRUCTORS -----//
 	public Customer()
@@ -30,18 +25,18 @@ public class Customer
 	public Customer(String firstName, String lastName, String email)
 	{
 		super();
-		this.firstName	= firstName;
-		this.lastName	= lastName;
-		this.email		= email;
+		this.firstName = firstName;
+		this.lastName  = lastName;
+		this.email     = email;
 	}
 	
 	public Customer(int id, String firstName, String lastName, String email)
 	{
 		super();
-		this.id			= id;
-		this.firstName	= firstName;
-		this.lastName	= lastName;
-		this.email		= email;
+		this.id        = id;
+		this.firstName = firstName;
+		this.lastName  = lastName;
+		this.email     = email;
 	}
 	
 	// ----- GETTERS AND SETTERS -----//
@@ -89,7 +84,8 @@ public class Customer
 	@Override
 	public String toString()
 	{
-		return "Customer [ID=" + id + ", First Name=" + firstName + ", Last Name=" + lastName + ", Email=" + email + "]";
+		return "Customer [ID=" + id + ", First Name=" + firstName + ", Last Name=" + lastName + ", Email=" + email +
+		       "]";
 	}
 	
 }

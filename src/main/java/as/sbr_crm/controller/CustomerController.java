@@ -1,7 +1,7 @@
 package as.sbr_crm.controller;
 
-import java.util.List;
-
+import as.sbr_crm.entity.Customer;
+import as.sbr_crm.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,8 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import as.sbr_crm.entity.Customer;
-import as.sbr_crm.service.CustomerService;
+import java.util.List;
 
 @Controller
 public class CustomerController

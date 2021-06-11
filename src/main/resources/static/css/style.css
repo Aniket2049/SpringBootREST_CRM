@@ -1,35 +1,40 @@
-.button {
-	background-color: #576ee4;
-	border: none;
-	color: white;
-	padding: 10px 20px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 14px;
-	margin: 4px 2px;
-	transition-duration: 0.4s;
-	cursor: pointer;
-	border: 2px solid #576ee4;
+.button
+{
+	background-color    : #576EE4;
+	border              : none;
+	border              : 2px solid #576EE4;
+	color               : white;
+	cursor              : pointer;
+	display             : inline-block;
+	font-size           : 14px;
+	margin              : 4px 2px;
+	padding             : 10px 20px;
+	text-align          : center;
+	text-decoration     : none;
+	transition-duration : 0.4s;
 }
 
-.button:hover {
-	background-color: white;
-	color: black;
+.button:hover
+{
+	background-color : white;
+	color            : black;
 }
 
-input[type=text] {
-	font-family: 'Ubuntu';
-	text-align: center;
+input[type=text]
+{
+	font-family : "Ubuntu";
+	text-align  : center;
 }
 
-input[type=text]:focus {
-	font-family: 'Ubuntu';
-	text-align: center;
-	border: 1px solid #576ee4;
-	border-radius: 2px;
+input[type=text]:focus
+{
+	border        : 1px solid #576EE4;
+	border-radius : 2px;
+	font-family   : "Ubuntu";
+	text-align    : center;
 }
 
-table, th, td {
-	padding: 5px;
+table, th, td
+{
+	padding : 5px;
 }
