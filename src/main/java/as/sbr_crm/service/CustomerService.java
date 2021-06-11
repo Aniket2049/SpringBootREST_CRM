@@ -1,8 +1,8 @@
 package as.sbr_crm.service;
 
-import java.util.List;
-
 import as.sbr_crm.entity.Customer;
+
+import java.util.List;
 
 public interface CustomerService
 {
